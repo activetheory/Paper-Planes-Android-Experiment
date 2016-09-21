@@ -1,5 +1,5 @@
 # Flocking
-![](https://media.giphy.com/media/BRu4VwFSiV1FS/giphy.gif)
+![](http://i.imgur.com/8LbCxqU.jpg)
 
 Documentation of the flocking behaviour inside of Paper Planes, by Active Theory.
 
@@ -25,7 +25,7 @@ Documentation of the flocking behaviour inside of Paper Planes, by Active Theory
 
 ## Description
 
-The flocking of the paper planes around the Earth was achieved utilising multi-threading to handle the simulations of each plane's location. This kept the main thread free to manage the application's animations and interactions. 
+The flocking of the paper planes around the Earth was achieved utilising multi-threading to handle the simulations of each plane's location. This kept the main thread free to manage the application's animations and interactions.
 
 Threejs was utilised to generate an instanced geometry, combining all of the planes into one draw call, allowing much complexity while keeping communication to a minimum. Each thread consisted of a separate simulation, dealing each with only a selection of planes; a segment of the geometry. On receiving the updated positions and orientations from each thread, the geometry's buffers are updated to reflect the location of each plane accordingly.
 
@@ -37,7 +37,7 @@ Starting inside of IntroMobile.js, we can see the flocking module being initiali
 
 The initialisation of PlaneFlocking.js first starts with the creation of the necessary Threejs elements. PlaneInstance.js handles this, by first loading the individual plane geometry (plane.json), generating the required amount of instances (nominated through the '_numInstances' variable), and then creating and attaching the corresponding material. The material is a Threejs 'ShaderMaterial' type, in which the Vertex and Fragment shaders are partially custom. The relevant shader files can be found under PlaneCPUInstance.vs and PlaneCPUInstance.fs accordingly. They handle the designation of the different positions and orientations to their relevant plane geometry segments, and then the updating of the lighting information of each face to reflect these changes.
 
-![](https://media.giphy.com/media/VurAveu59qQaA/giphy.gif)
+![](http://i.imgur.com/9TdaeH1.jpg)
 
 Next the simulation is instantiated through the use of PlaneFlockingCPU.js. Initially, there was also a GPGPU version written, upon the thinking that it would far outstrip the capabilities of the CPU version, which would still be necessary for many unsupported devices. However, we soon found that utilising threads could handle the required amount of planes while achieving the same performance, and was therefore the only version put into production.
 
