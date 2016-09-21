@@ -26,6 +26,6 @@ PlaneFoldGeometry.js handles the generation of the geometry and materials. The r
 
 PlanePinch.js handles the communication between folding interaction and folding animation. The interaction is contained inside of PinchMechanism.js, and the animation is maintained inside of PlaneFoldAnimation.js.
 
-PinchMechanism.js tracks the finger positions when two are touching the screen simaltaneously. Then, depending on a max value, derides the progress by comparing the distance between the fingers against this value.
+PinchMechanism.js tracks the finger positions when two are touching the screen simultaneously. Then, depending on a max value, derides the progress by comparing the distance between the fingers against this value.
 
 PlaneFoldAnimation.js takes the raw morph targets and creates a scrubbable animation timeline. The progress value from the pinching mechanic is then fed in, updating the animation to the relative point in time.
