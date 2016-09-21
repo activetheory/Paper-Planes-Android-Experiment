@@ -1,5 +1,5 @@
 # Flocking
-![](http://i.imgur.com/8LbCxqU.jpg)
+![](http://i.imgur.com/X8dl0jz.jpg)
 
 Documentation of the flocking behaviour inside of Paper Planes, by Active Theory.
 
